@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+	    <link type="text/css" rel="stylesheet" href="https://www.ans.gov.br/images/PrimeFaces/css/theme.css" />
+	    <link type="text/css" rel="stylesheet" href="https://www.ans.gov.br/images/PrimeFaces/css/style-prime-custom-ans.css" />
+		<h:outputStylesheet name="/css/css_menu.css" />
+		
+        <ui:insert name="AreaHead" >
+        	<title>#{msg['title.sistema']}</title>
+        </ui:insert>        
+    </h:head>
+    
+   	<h:body>   
+		<div style="width: 100%; height: 75px; background: url('/JavaServerFaces/faces/javax.faces.resource/topo_bg.png?ln=images') fixed no-repeat top right;">
+			<h:form>
+				<h:link outcome="/pages/home" >
+					<p:graphicImage style="width: 309px; height: 75px; float: left; margin-left: 25px;" library="images" name="ans_logo.gif" />
+				</h:link>
+			</h:form>
+
+			<div style="float: left; margin: 27px 0 0 50px;">
+				<label style="font-family: 'helvetica_57_condensed', Arial; font-size: 24px; color: #79a12f;">
+					#{msg['title.sistema']}
+				</label>
+			</div>
+		</div>
+					
+        <ui:insert name="menu" >
+           	<ui:include src="/pages/includes/menu.xhtml"/>
+        </ui:insert>			
+
+		<div style="width:80%;margin:auto;">
+			<p:messages id="mensagem" autoUpdate="true" redisplay="false" showDetail="false"/>
+		
+	        <ui:insert name="corpo" >
+       			<h:outputText value="Default content"/>
+       		</ui:insert>
+      		</div>  
+		
+		<div id="footer" class="footer">
+			<p:separator/>
+			<h:outputText class="footerText" value="#{lb['label.ans']}" /><br/>
+			<h:outputText class="footerText" value="#{msg['title.sistema']}" /><br/>
+			<h:outputText class="footerText" value="#{lb['label.versao']}" /><br/>
+		</div>		
+		
+   	</h:body>
+    	
+</html>
+
+
+

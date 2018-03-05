@@ -1,0 +1,30 @@
+@CHARSET "ISO-8859-1";
+
+div#barLogout {
+    border-bottom: 1px solid #DEDEDE;
+    text-align: right;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+div#barLogout div {
+	overflow: hidden;
+    padding: 5px 10px;
+}
+
+label#lbUsuario {
+	font-weight: bold;
+}
+
+div#barLogout a {
+	text-decoration: none;
+	color: #438DA0;
+}
+
+div#barLogout a:hover {
+	text-decoration: underline;
+}
+
+meumenu .ui-menu-child {
+	width: 200px !important;
+}

@@ -1,0 +1,1152 @@
+@CHARSET "ISO-8859-1";
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input,
+button, textarea, p, blockquote, th, td {
+	margin: 0;
+    padding: 0;
+    resize: none;
+}
+
+body {
+	font-family: 'Arial', tahoma, Geneva, sans-serif;
+	font-size: 12px !important;
+	color: #6D6D6D;
+	background-color: #FFFFFF;
+}
+
+/* ================================================ Geral ============================================  */
+.ui-widget {
+	background: #FFFFFF;
+}
+
+.ui-widget-overlay{
+	background-color: gray;
+	opacity: 0.4; 
+}
+
+.ui-tooltip {
+	padding: 5px 6px 3px 6px;
+	border: 1px solid #767676;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	color: #000000;
+	font-size: 11px;
+	background: -moz-linear-gradient(top, #ffffff 0%, #e4e5f0 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e4e5f0)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #ffffff 0%,#e4e5f0 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #ffffff 0%,#e4e5f0 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #ffffff 0%,#e4e5f0 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #ffffff 0%,#e4e5f0 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e4e5f0',GradientType=0 ); /* IE6-9 */
+}
+
+a.ui-state-hover {
+	padding: 1px !important;
+   	border:0 none !important;  
+   	text-decoration: none !important;  
+    font-weight: normal;  
+ }  
+}
+
+/* =========================================== Estilos padrões =======================================  */
+.ui-radiobutton-box, .ui-chkbox-box, .ui-selectcheckboxmenu-header,
+.ui-orderlist-caption, .ui-selectonemenu-trigger, .ui-selectcheckboxmenu-trigger {
+	background: -moz-linear-gradient(top, #f2f2f2 1%, #c5c5c5 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#f2f2f2), color-stop(100%,#c5c5c5)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #f2f2f2 1%,#c5c5c5 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #f2f2f2 1%,#c5c5c5 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #f2f2f2 1%,#c5c5c5 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #f2f2f2 1%,#c5c5c5 100%); /* W3C */
+}
+
+.ui-button, .ui-datepicker button, .ui-selectonemenu-item, .ui-selectlistbox-item, .ui-fieldset-legend,
+.ui-orderlist-item {
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.ui-inputfield, .ui-radiobutton, .ui-chkbox-box, .ui-datepicker, .ui-selectonemenu,
+.ui-selectonemenu-panel, .ui-selectonemenu-trigger, .ui-selectmanymenu,
+.ui-selectcheckboxmenu, .ui-selectcheckboxmenu-trigger, .ui-selectcheckboxmenu-header,
+.ui-selectcheckboxmenu-panel, .ui-orderlist-list, .ui-orderlist-caption {
+	border: 1px solid #C0C0C0;
+	color: #6D6D6D;
+}
+
+.ui-dialog-titlebar, .ui-datepicker-header,
+.ui-datatable thead th, .ui-treetable thead th, .ui-datatable .ui-paginator, .ui-datatable-header{
+    color: #FFFFFF;
+    font-weight: bold;
+	background: -moz-linear-gradient(top, #4ea6b2 0%, #00728e 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4ea6b2), color-stop(100%,#00728e)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #4ea6b2 0%,#00728e 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #4ea6b2 0%,#00728e 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #4ea6b2 0%,#00728e 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #4ea6b2 0%,#00728e 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4ea6b2', endColorstr='#00728e',GradientType=0 ); /* IE6-9 */ 
+	
+}
+
+/* ============================================ InputText =============================================  */
+.ui-inputfield {
+	padding: 2px !important;
+	background-color: #FFFFFF;
+}
+
+/* ============================================ InputText =============================================  */
+.ui-menubar,.ui-menuitem, .ui-menuitem-active {
+	font-weight: bold;
+	color: #FFFFFF;
+	
+	background: -moz-linear-gradient(top, #4ea6b2 0%, #00728e 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4ea6b2), color-stop(100%,#00728e)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #4ea6b2 0%,#00728e 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #4ea6b2 0%,#00728e 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #4ea6b2 0%,#00728e 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #4ea6b2 0%,#00728e 100%); /* W3C */
+	text-decoration:none; !important
+}
+
+.ui-menuitem-text {
+	font-weight: bold;
+	color: #FFFFFF;
+}
+
+/* ====================================== Radiobutton e Checkbox ======================================  */
+.ui-radiobutton {
+    border-radius: 10px;
+}
+
+.ui-chkbox {
+    background-color: transparent;	
+}
+
+.ui-chkbox-box {
+    border-radius: 2px;
+}
+
+/* ============================================= Datapicker ===========================================  */
+.ui-datepicker  {
+	padding: 3px;
+}
+
+.ui-datepicker .ui-corner-all, .ui-datepicker-title {
+	padding: 1px;
+}
+
+.ui-datepicker .ui-corner-all a {
+	top: 1px;
+	right: 0px;
+	padding: 1px !important;
+}
+
+.ui-datepicker .ui-datepicker-prev {
+	left: 1px;
+}
+
+.ui-datepicker table {
+    border: 1px solid #D9D9D9;
+	margin-bottom: 0px;
+    margin-top: 2px;
+}
+
+.ui-datepicker table thead {
+    border-bottom: 1px solid #D9D9D9;
+    margin-bottom: 0px;
+}
+
+.ui-datepicker th {
+	padding: 2px 0;
+}
+
+.ui-datepicker .ui-datepicker-title select {
+    margin-left: 1.5px;
+    margin-right: 1.5px;
+    width: 45%;
+}
+
+.ui-datepicker-other-month {
+	background: #FFFFFF;
+}
+
+.ui-datepicker-week-end {
+	background: #EEEEEE;		
+}
+
+.ui-datepicker-today {
+    background-color: #F0F3D7;
+    font-weight: bold;	
+}
+
+.ui-datepicker td a {
+	text-align: center;
+	color: #6D6D6D;
+    border: 1px solid #70B8D6;
+	padding: 4px 0 3px 0 !important;
+}
+
+.ui-datepicker td span {
+	text-align: center;	
+}
+
+.ui-datepicker td a:hover {
+	background-color: #09A3AD;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+
+.ui-datepicker-current-day a  {
+	background-color: #09A3AD;
+	font-weight: bold;
+	color: #FFFFFF !important;
+}
+
+.ui-datepicker-buttonpane {
+    background-color: #EEEEEE;
+    height: 22px;
+    margin: 2px 0 -1px 0 !important;
+    padding: 2px !important;
+}
+
+.ui-datepicker button {
+	height: 22px;
+	font-size: 11px;
+}
+
+/* ==================================== CommandButton ou CommandLink ==================================  */
+.ui-button, .ui-datepicker button {
+    padding: 0;
+    display: inline-block;
+    font-family: Arial, tahoma, Geneva, sans-serif;
+    border: 1px solid #CCCCCC;
+    color: #FFFFFF;
+    font-weight: bold;
+    margin-right: 0;
+	background: -moz-linear-gradient(top, #8bba59 0%, #498207 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#8bba59), color-stop(100%,#498207)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #8bba59 0%,#498207 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #8bba59 0%,#498207 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #8bba59 0%,#498207 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #8bba59 0%,#498207 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8bba59', endColorstr='#498207',GradientType=0 ); /* IE6-9 */
+}
+
+.ui-datepicker button {
+	margin: 0px !important;
+}
+
+.ui-button:hover, .ui-datepicker button:hover {
+	background: -moz-linear-gradient(top, #a2ce65 0%, #649b1b 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a2ce65), color-stop(100%,#649b1b)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #a2ce65 0%,#649b1b 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #a2ce65 0%,#649b1b 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #a2ce65 0%,#649b1b 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #a2ce65 0%,#649b1b 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a2ce65', endColorstr='#649b1b',GradientType=0 ); /* IE6-9 */
+}
+
+.ui-button:active, .ui-datepicker button:active {
+	background: #79A02E !important;
+}
+
+.ui-commandlink {
+	background: transparent;
+	border: 0 !important;
+}
+
+/* =========================== Comportamento padrão dos conjuntos de componentes  =====================  */
+.ui-selectoneradio label, .ui-selectmanycheckbox label {
+    margin: 4px 10px 0 3px;
+}
+
+.ui-selectonemenu-label, .ui-selectcheckboxmenu-label {
+	line-height: 16px;
+}
+
+/* ============================================ SelectOneMenu =========================================  */
+.ui-selectonemenu {
+	padding: 0px 1px;
+}
+
+.ui-selectonemenu-item:hover {
+	background: #79A12E;
+	color: #FFFFFF;
+    padding: 3px 5px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+/* ========================================== SelectManyMenu ==========================================  */
+.ui-selectmanymenu {
+    overflow: auto;
+    padding: 2px;
+    line-height: 18px;
+}
+
+.ui-selectmanymenu .ui-state-hover {
+    background: #79A12E;
+    color: #FFFFFF;
+}
+
+.ui-selectmanymenu .ui-selectlistbox-item {
+    padding-left: 5px;
+}
+
+.ui-selectonelistbox .ui-selectlistbox-item, li.ui-state-highlight {
+    background: #58A9BE;
+    color: #FFFFFF;
+}
+
+/* ======================================== SelectManyCheckbox ========================================  */
+.ui-selectcheckboxmenu-label-container {
+	text-decoration: none;
+}
+
+.ui-selectcheckboxmenu .ui-selectcheckboxmenu-label {
+	color: #6D6D6D;
+	padding-right: 28px;
+}
+
+.ui-selectcheckboxmenu-items {
+	margin-top: -2px;
+	padding-left: 1px;
+}
+
+.ui-selectcheckboxmenu-panel {
+	padding: 2px;
+}
+
+.ui-selectcheckboxmenu-panel .ui-selectcheckboxmenu-list-item label {
+	margin-bottom: -2px;
+	padding-left: 22px;
+}
+
+/* ============================================== Fildset =============================================  */
+.ui-fieldset {
+	background: #F7F7F7;
+	border: 1px solid #CCCCCC;
+	margin-bottom: 10px;
+}
+
+.ui-fieldset-legend {
+	font-weight: bold;
+	border: 1px solid #EEEEEE;
+}
+
+.ui-fieldset .ui-toolbar {
+	margin-top: 10px;
+}
+
+.ui-fieldset .ui-toolbar-group-left, .ui-fieldset .ui-toolbar-group-right {
+	padding-left: 7px;	
+	padding-right: 7px;
+}
+
+/* =============================================== Panel ==============================================  */
+.ui-panel-title {
+	font-weight: bold;
+	color: #FFFFFF;
+}
+
+.ui-panel-titlebar {
+	background: -moz-linear-gradient(top, #4ea6b2 0%, #00728e 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4ea6b2), color-stop(100%,#00728e)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #4ea6b2 0%,#00728e 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #4ea6b2 0%,#00728e 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #4ea6b2 0%,#00728e 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #4ea6b2 0%,#00728e 100%); /* W3C */
+}
+
+/* ============================================== TabView =============================================  */
+.ui-tabs-nav li a {
+    color: #6D6D6D;
+    font-weight: bold;
+    background: #F7F7F7;
+    margin-right: 5px;
+    border: 1px solid #CCCCCC;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+li.ui-tabs-selected a {
+    background: #FFFFFF;
+    border-bottom: 1px solid #FFFFFF;
+    margin-bottom: -3px;
+}
+
+.ui-tabs .ui-tabs-panel {
+    margin-top: -1px;
+    border: 1px solid #CCCCCC;
+}
+
+/* ============================================= DataTable ============================================  */
+.ui-datatable table, .ui-treetable table {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.ui-datatable thead th, .ui-treetable thead th {
+	border: 1px solid #669999;
+	border-left-width: 0;
+	border-bottom-width: 0;
+	white-space: normal;
+	line-height: 20px;
+}
+
+.ui-datatable thead tr:first-child th:first-child, .ui-treetable thead th:first-child {
+	border-left-width: 1px;
+	-webkit-border-top-left-radius: 5px;
+	-moz-border-radius-topleft: 5px;
+	border-top-left-radius: 5px;
+}
+
+.ui-datatable thead tr:first-child th:last-child, .ui-treetable thead th:last-child {
+	-webkit-border-top-right-radius: 5px;
+	-moz-border-radius-topright: 5px;
+	border-top-right-radius: 5px;
+}
+
+.ui-datatable div:nth-child(2) thead tr:first-child th:first-child {
+	-webkit-border-top-left-radius: 0px;
+	-moz-border-radius-topleft: 0px;
+	border-top-left-radius: 0px;
+}
+
+.ui-datatable div:nth-child(2) thead tr:first-child th:last-child {
+	-webkit-border-top-right-radius: 0px;
+	-moz-border-radius-topright: 0px;
+	border-top-right-radius: 0px;
+}
+
+.ui-datatable-even:hover, .ui-datatable-odd:hover {
+	color: #79A02E;
+	background: #FFFFDD;
+}
+
+.ui-datatable-even {
+	background: #FFFFFF;
+	line-height: 26px;
+}
+
+.ui-datatable-odd {
+	background: #F9F9F9;
+	line-height: 26px;
+}
+
+.ui-datatable-even.ui-state-highlight, .ui-datatable-odd.ui-state-highlight {
+	color: #79A02E;
+	background: #EEEECC;
+}
+
+.ui-datatable tbody td, .ui-treetable tbody td {
+	border: solid #CDCBCB;
+	border-width: 0 1px 1px 0;
+    text-align: left;
+	white-space: normal;	
+}
+
+.ui-datatable tbody td:first-child, .ui-treetable tbody td:first-child {
+	border-left-width: 1px;	
+}
+
+.ui-paginator {
+	-webkit-border-radius: 0 0 5px 5px;
+	-moz-border-radius: 0 0 5px 5px;
+	border-radius: 0 0 5px 5px;
+	border: 1px solid #669999;
+}
+
+.ui-paginator-top {
+	-webkit-border-radius: 5px 5px 0 0;
+	-moz-border-radius: 5px 5px 0 0;
+	border-radius: 5px 5px 0 0;
+	border-bottom-width: 0;
+}
+
+.ui-paginator-page {
+	vertical-align: middle;
+}
+
+.ui-paginator-pages .ui-state-active {
+	background: #B4C135;
+}
+
+.ui-paginator-current {
+	padding: 5px !important;
+	float: right;
+}
+
+.ui-paginator-jtp-select {
+	margin: 1px 0 2px 0;
+}
+
+.ui-datatable .ui-selectonemenu, .ui-datatable .ui-inputmask, .ui-datatable .ui-datalist {
+	background: transparent;
+	border: 1px solid transparent;
+}
+
+.ui-datatable .ui-selectonemenu .ui-selectonemenu-trigger {
+	display: none;
+}
+
+.ui-datatable .ui-inputtext:focus, .ui-datatable .ui-selectonemenu.ui-state-focus, .ui-datatable .ui-inputmask.ui-state-focus,
+.ui-datatable .ui-datalist:focus {
+	border: 1px solid #C0C0C0;
+	background: #FFFFFF;
+}
+
+.ui-datatable .ui-selectonemenu.ui-state-focus .ui-selectonemenu-trigger {
+	display: block;
+}
+
+.ui-selection-column {
+	width: 18px;
+}
+
+.ui-chkbox-all {
+	margin: 0 0 2px 0 !important;
+}
+
+
+/* ============================================== Toolbar =============================================  */
+.ui-toolbar {
+	background-color: transparent;
+	padding: 0;
+}
+
+.ui-toolbar-group-left .ui-button, .ui-toolbar-group-left a {
+	margin-right: 10px !important;
+}
+
+.ui-toolbar-group-right .ui-button, .ui-toolbar-group-right a {
+	margin-left: 10px !important;
+}
+
+/* ============================================= OrderList ============================================  */ 
+.ui-orderlist-item:hover {
+    background: #79A02E;
+    color: #FFFFFF;
+}
+
+.ui-orderlist-caption {
+    font-weight: bold;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+.ui-orderlist-controls {
+    padding: 0 5px;
+ }
+ 
+ /* ============================================== Editor =============================================  */ 
+ .ui-editor {
+ 	margin: 0 auto;
+ 	border: 1px solid #CCCCCC;
+ }
+ 
+ /* ============================================ Fileupload ============================================  */
+.ans-fileUploadSimple .ui-fileupload {
+	background: transparent;
+	float:left;
+}
+
+.ans-fileUploadSimple .fileupload-buttonbar {
+	padding: 0;
+}
+
+.ans-fileUploadSimple .fileupload-content {
+	display: none;
+}
+
+.ans-fileUploadSimple .ui-icon-plusthick {
+	background-position: -224px -48px;
+}
+
+.ans-fileUploadSimple-label {
+    clear: both;
+    border: 1px solid #C0C0C0;
+    border-left: 0;
+    -webkit-border-bottom-right-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-bottomright: 5px;
+    -moz-border-radius-topright: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    font-weight: bold;
+    position: relative;
+	top: 7px;
+	left: -6px;
+	padding: 6px 10px;
+    white-space: nowrap;
+}
+ 
+/* =========================================== Growl e Message ========================================  */
+.ui-growl-item.ui-severity-info, .ui-messages-info, .ui-message-info {
+	color: #333333;
+	border: 1px solid #30AADE;
+	background: -moz-linear-gradient(top, #a1d8f1 57%, #40bbef 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(57%,#a1d8f1), color-stop(100%,#40bbef)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #a1d8f1 57%,#40bbef 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #a1d8f1 57%,#40bbef 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #a1d8f1 57%,#40bbef 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #a1d8f1 57%,#40bbef 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a1d8f1', endColorstr='#40bbef',GradientType=0 ); /* IE6-9 */
+}
+
+.ui-growl-item.ui-severity-error, .ui-messages-error, .ui-message-error {
+	color: #FFFFFF;
+	border: 1px solid #993300;
+	background: -moz-linear-gradient(top, #dd946c 53%, #e2501f 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(53%,#dd946c), color-stop(100%,#e2501f)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #dd946c 53%,#e2501f 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #dd946c 53%,#e2501f 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #dd946c 53%,#e2501f 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #dd946c 53%,#e2501f 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dd946c', endColorstr='#e2501f',GradientType=0 ); /* IE6-9 */
+}
+
+.ui-growl-item.ui-severity-warn, .ui-messages-warn, .ui-message-warn {
+	color: #993300;
+	border: 1px solid #CCCCCC;
+	background: #f9e069; /* Old browsers */
+	background: -moz-linear-gradient(top, #f9e069 57%, #ddbc00 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(57%,#f9e069), color-stop(100%,#ddbc00)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #f9e069 57%,#ddbc00 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #f9e069 57%,#ddbc00 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #f9e069 57%,#ddbc00 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #f9e069 57%,#ddbc00 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9e069', endColorstr='#ddbc00',GradientType=0 ); /* IE6-9 */
+}
+
+.ui-growl-item-fatal, .ui-messages-fatal, .ui-message-fatal {
+	background: #eeeeee; /* Old browsers */
+	background: -moz-linear-gradient(top, #eeeeee 0%, #bbbbbb 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeeee), color-stop(100%,#bbbbbb)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #eeeeee 0%,#bbbbbb 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #eeeeee 0%,#bbbbbb 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #eeeeee 0%,#bbbbbb 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #eeeeee 0%,#bbbbbb 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#bbbbbb',GradientType=0 ); /* IE6-9 */
+}
+
+/* =============================================== Growl ===============================================  */
+ .ui-growl {
+	background-color: transparent;
+}
+
+.ui-growl-item-container {
+	margin-top: 10px;
+	background-color: #FFFFFF;
+}
+
+.ui-growl-icon-close.ui-icon-closethick {
+	background-position: -97px -129px;
+	right: 5px;
+}
+ 
+.ui-growl-icon-close.ui-icon {
+	border-radius: 10px;
+	background-color: #FFFFFF;
+	border: 1px solid #C0C0C0;
+	width: 15px;
+	height: 15px;
+}
+
+.ui-growl-item-container {
+	opacity: 1; 
+	margin-bottom: 0;
+}
+
+/* ============================================== Message =============================================  */
+.ui-messages-info-icon, .ui-messages-warn-icon, .ui-messages-error-icon, .ui-messages-fatal-icon {
+	margin-top: -6px;
+}
+
+.ui-messages .ui-icon-close {
+	border-radius: 10px;
+	background-color: #FFFFFF;
+	width: 17px;
+	border: 1px solid #C0C0C0;
+}
+
+.ui-messages .ui-messages-close {
+ 	margin-right: -7px;
+    margin-top: -7px;
+}
+    
+/* ============================================= Status ==============================================  */
+.ui-state-error {
+	border-color: #FF0000 !important;
+}
+
+.ui-state-disabled, .ui-state-disabled label, .ui-state-disabled:hover, .ui-state-disabled:active {
+	background: #EEEEEE !important;
+	color: #999999 !important;
+	text-shadow: 2px !important;
+}
+
+.ui-datatable .ui-inputfield.ui-state-disabled, .ui-datatable .ui-state-disabled label,
+.ui-paginator span.ui-state-disabled {
+	background: transparent !important;
+	color: #6D6D6D !important;
+}
+
+.ui-datatable-even.ui-state-disabled {
+	background: #FFFFFF !important;
+}
+
+.ui-datatable-odd.ui-state-disabled {
+	background: #F9F9F9 !important;
+}
+
+.ui-datepicker-other-month.ui-state-disabled {
+	background: #FFFFFF !important;
+}
+
+.ui-datepicker-week-end.ui-state-disabled {
+	background: #EEEEEE !important;		
+}
+
+.ui-datepicker .ui-corner-all.ui-state-disabled {
+	background: transparent !important;
+}
+
+/* ============================================== Ícones ==============================================  */
+.ui-icon {
+    height: 16px;
+    width: 16px;
+    background-repeat: no-repeat;
+    display: block;
+    overflow: hidden;
+    text-indent: -99999px;
+    background-image: url(#{resource['/images/icons_1.png']});
+}
+
+.ui-button .ui-icon, .ui-dialog-titlebar-icon .ui-icon, .ui-datepicker .ui-corner-all .ui-icon {
+	background-image: url(#{resource['/images/icons_2.png']});
+}
+
+.ui-state-disabled .ui-icon, .ui-paginator .ui-icon {
+	background-image: url(#{resource['/images/icons_3.png']});
+}
+
+.ui-state-error .ui-icon {
+	background-image: url(#{resource['/images/icons_4.png']});
+}
+
+.ui-paginator .ui-state-disabled .ui-icon, .ui-datepicker .ui-corner-all .ui-state-disabled .ui-icon {
+	background-image: url(#{resource['/images/icons_1.png']});	
+}
+
+/* ===================================== Posicionamento dos Ícones ====================================  */
+.ui-icon-carat-1-n { background-position: 0 0 }
+.ui-icon-carat-1-ne { background-position: -16px 0 }
+.ui-icon-carat-1-e { background-position: -32px 0 }
+.ui-icon-carat-1-se { background-position: -48px 0 }
+.ui-icon-carat-1-s { background-position: -64px 0 }
+.ui-icon-carat-1-sw { background-position: -80px 0 }
+.ui-icon-carat-1-w { background-position: -96px 0 }
+.ui-icon-carat-1-nw { background-position: -112px 0 }
+.ui-icon-carat-2-n-s { background-position: -128px 0 }
+.ui-icon-carat-2-e-w { background-position: -144px 0 }
+.ui-icon-triangle-1-n { background-position: 0 -16px }
+.ui-icon-triangle-1-ne { background-position: -16px -16px }
+.ui-icon-triangle-1-e { background-position: -32px -16px }
+.ui-icon-triangle-1-se { background-position: -48px -16px }
+.ui-icon-triangle-1-s { background-position: -64px -16px }
+.ui-icon-triangle-1-sw { background-position: -80px -16px }
+.ui-icon-triangle-1-w { background-position: -96px -16px }
+.ui-icon-triangle-1-nw { background-position: -112px -16px }
+.ui-icon-triangle-2-n-s { background-position: -128px -16px }
+.ui-icon-triangle-2-e-w { background-position: -144px -16px }
+.ui-icon-arrow-1-n { background-position: 0 -32px }
+.ui-icon-arrow-1-ne { background-position: -16px -32px }
+.ui-icon-arrow-1-e { background-position: -32px -32px }
+.ui-icon-arrow-1-se { background-position: -48px -32px }
+.ui-icon-arrow-1-s { background-position: -64px -32px }
+.ui-icon-arrow-1-sw { background-position: -80px -32px }
+.ui-icon-arrow-1-w { background-position: -96px -32px }
+.ui-icon-arrow-1-nw { background-position: -112px -32px }
+.ui-icon-arrow-2-n-s { background-position: -128px -32px }
+.ui-icon-arrow-2-ne-sw { background-position: -144px -32px }
+.ui-icon-arrow-2-e-w { background-position: -160px -32px }
+.ui-icon-arrow-2-se-nw { background-position: -176px -32px }
+.ui-icon-arrowstop-1-n { background-position: -192px -32px }
+.ui-icon-arrowstop-1-e { background-position: -208px -32px }
+.ui-icon-arrowstop-1-s { background-position: -224px -32px }
+.ui-icon-arrowstop-1-w { background-position: -240px -32px }
+.ui-icon-arrowthick-1-n { background-position: 0 -48px }
+.ui-icon-arrowthick-1-ne { background-position: -16px -48px }
+.ui-icon-arrowthick-1-e { background-position: -32px -48px }
+.ui-icon-arrowthick-1-se { background-position: -48px -48px }
+.ui-icon-arrowthick-1-s { background-position: -64px -48px }
+.ui-icon-arrowthick-1-sw { background-position: -80px -48px }
+.ui-icon-arrowthick-1-w { background-position: -96px -48px }
+.ui-icon-arrowthick-1-nw { background-position: -112px -48px }
+.ui-icon-arrowthick-2-n-s { background-position: -128px -48px }
+.ui-icon-arrowthick-2-ne-sw { background-position: -144px -48px }
+.ui-icon-arrowthick-2-e-w { background-position: -160px -48px }
+.ui-icon-arrowthick-2-se-nw { background-position: -176px -48px }
+.ui-icon-arrowthickstop-1-n { background-position: -192px -48px }
+.ui-icon-arrowthickstop-1-e { background-position: -208px -48px }
+.ui-icon-arrowthickstop-1-s { background-position: -224px -48px }
+.ui-icon-arrowthickstop-1-w { background-position: -240px -48px }
+.ui-icon-arrowreturnthick-1-w { background-position: 0 -64px }
+.ui-icon-arrowreturnthick-1-n { background-position: -16px -64px }
+.ui-icon-arrowreturnthick-1-e { background-position: -32px -64px }
+.ui-icon-arrowreturnthick-1-s { background-position: -48px -64px }
+.ui-icon-arrowreturn-1-w { background-position: -64px -64px }
+.ui-icon-arrowreturn-1-n { background-position: -80px -64px }
+.ui-icon-arrowreturn-1-e { background-position: -96px -64px }
+.ui-icon-arrowreturn-1-s { background-position: -112px -64px }
+.ui-icon-arrowrefresh-1-w { background-position: -128px -64px }
+.ui-icon-arrowrefresh-1-n { background-position: -144px -64px }
+.ui-icon-arrowrefresh-1-e { background-position: -160px -64px }
+.ui-icon-arrowrefresh-1-s { background-position: -176px -64px }
+.ui-icon-arrow-4 { background-position: 0 -80px }
+.ui-icon-arrow-4-diag { background-position: -16px -80px }
+.ui-icon-extlink { background-position: -32px -80px }
+.ui-icon-newwin { background-position: -48px -80px }
+.ui-icon-refresh { background-position: -64px -80px }
+.ui-icon-shuffle { background-position: -80px -80px }
+.ui-icon-transfer-e-w { background-position: -96px -80px }
+.ui-icon-transferthick-e-w { background-position: -112px -80px }
+.ui-icon-folder-collapsed { background-position: 0 -96px }
+.ui-icon-folder-open { background-position: -16px -96px }
+.ui-icon-document { background-position: -32px -96px }
+.ui-icon-document-b { background-position: -48px -96px }
+.ui-icon-note { background-position: -64px -96px }
+.ui-icon-mail-closed { background-position: -80px -96px }
+.ui-icon-mail-open { background-position: -96px -96px }
+.ui-icon-suitcase { background-position: -112px -96px }
+.ui-icon-comment { background-position: -128px -96px }
+.ui-icon-person { background-position: -144px -96px }
+.ui-icon-print { background-position: -160px -96px }
+.ui-icon-trash { background-position: -176px -96px }
+.ui-icon-locked { background-position: -192px -96px }
+.ui-icon-unlocked { background-position: -208px -96px }
+.ui-icon-bookmark { background-position: -224px -96px }
+.ui-icon-tag { background-position: -240px -96px }
+.ui-icon-home { background-position: 0 -112px }
+.ui-icon-flag { background-position: -16px -112px }
+.ui-icon-calendar { background-position: -32px -112px }
+.ui-icon-cart { background-position: -48px -112px }
+.ui-icon-pencil { background-position: -64px -112px }
+.ui-icon-clock { background-position: -80px -112px }
+.ui-icon-disk { background-position: -96px -112px }
+.ui-icon-calculator { background-position: -112px -112px }
+.ui-icon-zoomin { background-position: -128px -112px }
+.ui-icon-zoomout { background-position: -144px -112px }
+.ui-icon-search { background-position: -160px -112px }
+.ui-icon-wrench { background-position: -176px -112px }
+.ui-icon-gear { background-position: -192px -112px }
+.ui-icon-heart { background-position: -208px -112px }
+.ui-icon-star { background-position: -224px -112px }
+.ui-icon-link { background-position: -240px -112px }
+.ui-icon-cancel { background-position: 0 -128px }
+.ui-icon-plus { background-position: -16px -128px }
+.ui-icon-plusthick { background-position: -32px -128px }
+.ui-icon-minus { background-position: -48px -128px }
+.ui-icon-minusthick { background-position: -64px -128px }
+.ui-icon-close { background-position: -80px -128px }
+.ui-icon-closethick { background-position: -96px -128px }
+.ui-icon-key { background-position: -112px -128px }
+.ui-icon-lightbulb { background-position: -128px -128px }
+.ui-icon-scissors { background-position: -144px -128px }
+.ui-icon-clipboard { background-position: -160px -128px }
+.ui-icon-copy { background-position: -176px -128px }
+.ui-icon-contact { background-position: -192px -128px }
+.ui-icon-image { background-position: -208px -128px }
+.ui-icon-video { background-position: -224px -128px }
+.ui-icon-script { background-position: -240px -128px }
+.ui-icon-alert { background-position: 0 -144px }
+.ui-icon-info { background-position: -16px -144px }
+.ui-icon-notice { background-position: -32px -144px }
+.ui-icon-help { background-position: -48px -144px }
+.ui-icon-check { background-position: -64px -144px }
+.ui-icon-bullet { background-position: -80px -144px }
+.ui-icon-radio-on { background-position: -96px -144px }
+.ui-icon-radio-off { background-position: -112px -144px }
+.ui-icon-pin-w { background-position: -128px -144px }
+.ui-icon-pin-s { background-position: -144px -144px }
+.ui-icon-play { background-position: 0 -160px }
+.ui-icon-pause { background-position: -16px -160px }
+.ui-icon-seek-next { background-position: -32px -160px }
+.ui-icon-seek-prev { background-position: -48px -160px }
+.ui-icon-seek-end { background-position: -64px -160px }
+.ui-icon-seek-start { background-position: -80px -160px }
+.ui-icon-seek-first { background-position: -80px -160px }
+.ui-icon-stop { background-position: -96px -160px }
+.ui-icon-eject { background-position: -112px -160px }
+.ui-icon-volume-off { background-position: -128px -160px }
+.ui-icon-volume-on { background-position: -144px -160px }
+.ui-icon-power { background-position: 0 -176px }
+.ui-icon-signal-diag { background-position: -16px -176px }
+.ui-icon-signal { background-position: -32px -176px }
+.ui-icon-battery-0 { background-position: -48px -176px }
+.ui-icon-battery-1 { background-position: -64px -176px }
+.ui-icon-battery-2 { background-position: -80px -176px }
+.ui-icon-battery-3 { background-position: -96px -176px }
+.ui-icon-circle-plus { background-position: 0 -192px }
+.ui-icon-circle-minus { background-position: -16px -192px }
+.ui-icon-circle-close { background-position: -32px -192px}
+.ui-icon-circle-triangle-e { background-position: -48px -192px }
+.ui-icon-circle-triangle-s { background-position: -64px -192px }
+.ui-icon-circle-triangle-w { background-position: -80px -192px }
+.ui-icon-circle-triangle-n { background-position: -96px -192px }
+.ui-icon-circle-arrow-e { background-position: -112px -192px }
+.ui-icon-circle-arrow-s { background-position: -128px -192px }
+.ui-icon-circle-arrow-w { background-position: -144px -192px }
+.ui-icon-circle-arrow-n { background-position: -160px -192px }
+.ui-icon-circle-zoomin { background-position: -176px -192px }
+.ui-icon-circle-zoomout { background-position: -192px -192px }
+.ui-icon-circle-check { background-position: -208px -192px }
+.ui-icon-circlesmall-plus { background-position: 0 -208px }
+.ui-icon-circlesmall-minus { background-position: -16px -208px }
+.ui-icon-circlesmall-close { background-position: -32px -208px }
+.ui-icon-squaresmall-plus { background-position: -48px -208px }
+.ui-icon-squaresmall-minus { background-position: -64px -208px }
+.ui-icon-squaresmall-close { background-position: -80px -208px }
+.ui-icon-grip-dotted-vertical { background-position: 0 -224px }
+.ui-icon-grip-dotted-horizontal { background-position: -16px -224px }
+.ui-icon-grip-solid-vertical { background-position: -32px -224px }
+.ui-icon-grip-solid-horizontal { background-position: -48px -224px }
+.ui-icon-gripsmall-diagonal-se { background-position: -64px -224px }
+.ui-icon-grip-diagonal-se { background-position: -80px -224px }
+
+/* ====================================================================================================  */
+/* ========================================= CSS Específicos ==========================================  */
+/* ====================================================================================================  */
+
+/* =========================================== Utilitários ============================================  */
+.ans-warnText {
+	color: #FF0000;
+	font-weight: bold;
+}
+
+.ans-dlgFieldset {
+	margin-top: 6px;
+	margin-bottom: 6px;	
+}
+
+.ans-firstFocus {
+	position:absolute;
+	top:-9999px;
+}
+
+.ans-toolbarBottomFixed {
+	background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #DEDEDE;
+    bottom: 0;
+    left: 0;
+    padding: 2px 0 2px 24px;
+    position: fixed;
+    width: 100%;
+    height: 31px;
+    z-index: 2;
+}
+
+/* Início dos estilos para content de botôes que não são toolbar */
+.ans-divBtnField {
+	display: inline-block;
+	position: relative;
+	left: 4px;
+	top: 2px;
+	margin-top: -5px;
+}
+
+.ans-divBtnField .ui-commandlink {
+	color: #438DA0;
+	position: relative;
+	top: -2px;	
+	text-decoration: none;
+}
+
+.ans-divBtnField .ui-commandlink:hover {
+	text-decoration: underline;
+}
+
+.ans-tdOptions {
+	width: 1px;
+}
+
+.ans-tdOptions > div {
+	white-space: nowrap;
+	margin-left: 5px;
+	text-align: center;
+}
+
+.ans-tdOptions > div button, .ans-divBtnField button, .ans-btnSmall {
+	width: 26px;
+	height: 26px;
+	margin-right: 2px;
+}
+
+.ans-tdOptions > div img, .ans-divBtnField img {
+	margin-right: 2px;
+	height: 21px;
+}
+
+.ans-tdOptions > div button, .ans-btnSmall, .ans-tdOptions > div img {
+	margin-right: 5px;
+}
+/* Fim dos estilos para content de botôes que não são toolbar */
+
+/* ========================= Formulario Tabless Structure e Tabelas Alinhadas =========================  */
+.ans-divForm {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.ans-divGrid {
+	display: inherit;
+}
+
+.ans-divGrid.multiGrid {
+	display: inline-block;
+	float: left;
+}
+
+.ans-divRow {
+	display: table-row;
+}
+
+.ui-fieldset .ans-divForm, .ui-fieldset .ans-divGrid {
+	padding-left: 7px;
+	padding-right: 7px;
+}
+
+.ans-divInnerForm {
+	display: table-cell;
+	vertical-align: bottom;
+	padding-right: 10px;
+}
+
+.ans-divForm .ans-spacerForm {
+	height: 44px;
+}
+
+.ans-divForm .ui-outputlabel {
+	margin-top: 7px;
+	margin-bottom: 2px;
+}
+
+.ans-divForm .ui-outputlabel.ans-preposition {
+	display: inline-block;
+	margin: 0 5px;
+}
+
+.ans-divForm .ui-outputlabel:after, .ans-divGrid .ui-outputlabel:after {
+	content: ":";
+}
+
+.ans-divForm .ui-outputlabel.ans-required:after, .ans-divGrid .ui-outputlabel.ans-required:after {
+	content: "*:";
+}
+
+.ans-divForm .ui-outputlabel.ans-preposition:after {
+	content: "a";
+}
+
+.ans-divForm .ui-chkbox {
+	background-color: transparent;
+}
+
+.ans-divForm .ui-chkbox-box {
+	margin: 10px 2px 10px 0;
+	position: relative;
+    top: 10px;
+}
+
+.ans-divForm .ans-alignField .ui-chkbox-box {
+    top: 14px;
+}
+
+.ans-divInnerForm .ui-chkbox-box {
+    top: 2px;
+    margin: 0;
+}
+
+.ans-divForm .ui-chkbox-icon {
+	display: table;
+}
+
+.ans-divForm .ui-chkbox-label, .ans-chkbox .ui-chkbox-label {
+	float: none;
+	position: relative;
+    top: -4px;
+}
+
+.ans-divInnerForm .ui-chkbox-label {
+	top: -2px;
+}
+
+.ans-divForm .ans-alignField .ui-chkbox-label {
+    top: 0px;
+}
+
+.ans-divForm .ui-outputlabel, .ans-divForm .ans-spacerForm, .ans-divForm .ui-selectcheckboxmenu,
+.ans-divForm .ui-chkbox {
+	display: block;
+}
+
+.ans-divGrid label {
+	padding-bottom: 2px;
+	padding-left: 7px;
+	font-weight: bold;
+	display: block;
+}
+
+.ans-divGrid .ui-toolbar-group-left, .ans-divGrid .ui-toolbar-group-right {
+	padding-left: 0;
+	padding-right: 0px;
+}
+
+.ans-divGrid .ui-toolbar {
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+/* ======================================= Dialog de Confirmação ======================================  */
+.ans-dlgConfirm .ui-dialog-content {
+	overflow: hidden;
+}
+
+.ans-dlgConfirm .ui-toolbar {
+	margin-top: 10px;
+	text-align: center;
+}
+
+.ans-dlgConfirm .ui-toolbar > div {
+	float: none;
+}
+
+/* ====================================== Variações de Datatable ======================================  */
+
+.ans-checkSelect .ui-datatable-even {
+	color: #6D6D6D;
+	background: #FFFFFF;
+}
+
+.ans-checkSelect .ui-datatable-odd {
+	color: #6D6D6D;
+	background: #F9F9F9;
+}
+
+
+
+
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
+	text-shadow: none; !important
+}
+
+.ui-growl {
+    top: 45%;
+    left: 40%;
+}
+

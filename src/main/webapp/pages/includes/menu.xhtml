@@ -1,0 +1,23 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
+
+	<h:form id="menuForm">	
+		<div class="clear-po-ans"/>		
+		<div id="barLogout">
+			<div>			
+				<span>
+					<h:outputText value="#{sessionBean.dataAtual}" />
+				</span> | 
+				<p:outputLabel id="lbUsuario" value="#{lb['label.usuario']}:" />
+				<span>
+					<h:outputText value="#{sessionBean.usuarioLogado}" />
+				</span> |
+				<h:commandLink id="confirmaSair" action="#{sessionBean.logout}" value="#{lb['label.sair']}" />			
+			</div>
+		</div>
+	</h:form>
+</ui:composition>

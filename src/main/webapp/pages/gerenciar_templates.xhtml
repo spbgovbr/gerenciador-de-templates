@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?> 
+<ui:composition 
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	template="/template/template.xhtml">
+	
+	<ui:define name="corpo">
+		
+		
+		<h:form id="formCentral" enctype="multipart/form-data" >
+			<h2>#{lb['label.gerenciar.templates']}</h2>
+		
+			<br/>
+		
+			<p:commandButton value="#{lb['label.novo.template']}" actionListener="#{templatesBean.novoTemplate}" oncomplete="PF('templateDialog').show()" 
+				title="#{lb['label.criar.novo.template']}" update=":formNovo:msgDialog,:formEditar:editTemplateDialog,:formNovo" />
+			<br/>
+			<br/>
+
+			<h:panelGrid id="tblFiltro" columns="3" cellpadding="5"
+				cellspacing="7" border="0">
+				<h:outputText value="#{lb['label.login']} / #{lb['label.nome']}:" />
+				<p:inputText id="filtro" value="#{templatesBean.filtro}" size="50" />
+				<p:commandButton id="filtrarTemplates" update="tbTemplates" value="#{lb['label.filtrar']}" />
+			</h:panelGrid>
+
+			<br/>
+
+			<p:dataTable value="#{templatesBean.model}" var="template" id="tbTemplates" emptyMessage="#{msg['mensagem.sem.registros']}" rows="10" paginator="true" 
+				paginatorPosition="bottom" lazy="true">	
+				<p:column width="30%">
+					<f:facet name="header">
+						<h:outputText value="#{lb['label.identificador']}" />
+					</f:facet>
+					<h:outputText value="#{template.nome}" />
+				</p:column>
+				<p:column>
+					<f:facet name="header">
+						<h:outputText value="#{lb['label.descricao']}" />
+					</f:facet>
+					<h:outputText value="#{template.descricao}" />
+				</p:column>
+				<p:column width="15%">
+					<f:facet name="header">
+						<h:outputText value="#{lb['label.responsavel']}" />
+					</f:facet>
+					<h:outputText value="#{template.responsavel}" />
+				</p:column>
+				<p:column width="10%">
+					<f:facet name="header">
+						<h:outputText value="#{lb['label.acoes']}" />
+					</f:facet>
+				
+				    <p:menuButton value="Opções">
+				        <p:menuitem value="#{lb['label.editar']}" update=":formEditar:editTemplateDialog" icon="fa fa-pencil" ajax="true" 
+				        	oncomplete="PF('editTemplateDialog').show()" actionListener="#{templatesBean.editarTemplate(template)}" />
+				        	
+				        <p:menuitem value="#{lb['label.edicao.rapida']}" actionListener="#{templatesBean.editarTemplate(template)}" update=":formEditarCorpo:editCorpoDialog" 
+				        	icon="fa fa-wrench" ajax="true" oncomplete="PF('editCorpoDialog').show()" />
+				        	       	
+				        <p:menuitem value="#{lb['label.download']}" ajax="false" icon="fa fa-download">
+				        	<p:fileDownload	value="#{templatesBean.downloadTemplate(template.nome)}" />
+				        </p:menuitem>
+				        
+   				        <p:menuitem value="#{lb['label.historico']}" icon="fa fa-history" actionListener="#{templatesBean.getHistoricoTemplate(template.nome)}" 
+   				        	oncomplete="PF('historicoDialog').show()" update=":formHistorico:historicoDialog" ajax="true" />				        
+				        
+				        <p:menuitem value="#{lb['label.excluir']}" actionListener="#{templatesBean.excluirTemplate(template.nome)}" update="tbTemplates, :mensagem" 
+				        		ajax="false" icon="fa fa-trash" immediate="true"/>				        
+				    </p:menuButton>
+				</p:column>	
+			</p:dataTable>
+		</h:form>
+		
+		<h:form id="formNovo" enctype="multipart/form-data">
+			<p:dialog header="#{lb['label.criar.novo.template']}" width="700" widgetVar="templateDialog" resizable="false" id="templateDialog"
+				showEffect="fade" modal="true">
+		  		<br/>
+		  		<p:messages id="msgDialog" showDetail="false" autoUpdate="false" />
+		  		
+<!-- 				<h:form id="formNovo" enctype="multipart/form-data"> -->
+					<h:panelGrid id="display" columns="2" cellpadding="5" cellspacing="7" border="0" >
+						<h:outputText value="#{lb['label.identificador']}:" />
+						<p:inputText id="identificador" value="#{templatesBean.template.nome}" size="78">
+							<p:ajax/>
+						</p:inputText>
+						
+						<h:outputText value="#{lb['label.descricao']}:" />
+						<p:inputTextarea id="descricao" value="#{templatesBean.template.descricao}" cols="80" />
+						
+						<h:outputText value="#{lb['label.exemplo']}:" />
+						<p:inputTextarea id="exemplo" value="#{templatesBean.template.exemplo}" cols="80" rows="10" />
+						
+						<h:outputText value="#{lb['label.restrito']}:" />
+						<p:selectBooleanCheckbox id="restrito" value="#{templatesBean.template.restrito}" />
+						
+						<h:outputText value="#{lb['label.arquivo']}:" />
+						<p:fileUpload id="novoTemplateArquivo" value="#{templatesBean.arquivoTemplate}" label="Upload" mode="simple" skinSimple="true" />
+						
+				        <br/>
+				  		<h:panelGrid id="botoesDlg" columns="2" cellspacing="7" style="margin:0 auto;">
+				  			<h:commandButton id="novoTemplateButton" actionListener="#{templatesBean.salvar()}" value="Salvar" >
+				  				<f:ajax execute=":formNovo :formNovo:novoTemplateArquivo" render=":formNovo:msgDialog :formCentral:tbTemplates" />
+				  			</h:commandButton>
+				  			
+				  			<p:commandButton oncomplete="PF('templateDialog').hide()" value="#{lb['label.cancelar']}" update=":formCentral:tbTemplates" />
+			  			</h:panelGrid>
+				  		<br/>
+					</h:panelGrid>				
+<!-- 				</h:form> -->
+			</p:dialog>
+		</h:form>
+		
+		<h:form id="formEditar" enctype="multipart/form-data">		
+			<p:dialog header="#{lb['label.editar.template']}" width="700" widgetVar="editTemplateDialog" resizable="false" id="editTemplateDialog"
+				showEffect="fade" modal="true">
+		  		<br/>
+		  		<p:messages id="msgEditDialog" showDetail="false" autoUpdate="false" />
+<!-- 		  		<h:form id="formEditar" enctype="multipart/form-data"> -->
+					<h:panelGrid id="editTemplate" columns="2" cellpadding="5" cellspacing="7" border="0">
+						<h:outputText value="#{lb['label.identificador']}:" />
+						<p:inputText id="editNome" value="#{templatesBean.template.nome}" size="78" />
+						
+						<h:outputText value="#{lb['label.descricao']}:" />
+						<p:inputTextarea value="#{templatesBean.template.descricao}" cols="80" />
+						
+						<h:outputText value="#{lb['label.exemplo']}:" />
+						<p:inputTextarea value="#{templatesBean.template.exemplo}" cols="80" rows="10" />
+						
+						<h:outputText value="#{lb['label.restrito']}:" />
+						<p:selectBooleanCheckbox value="#{templatesBean.template.restrito}" />
+						
+						<h:outputText value="#{lb['label.arquivo']}:" />
+						<p:fileUpload id="arquivoTemplateAtualizado" value="#{templatesBean.arquivoTemplate}" label="Upload" mode="simple" skinSimple="true" />
+						
+				        <br/>
+				  		<h:panelGrid columns="2" cellspacing="7" style="margin:0 auto;">
+				  			<h:commandButton actionListener="#{templatesBean.atualizarTemplate()}" value="Salvar" >
+				  				<f:ajax execute=":formEditar :formEditar:arquivoTemplateAtualizado" render=":formEditar:msgDialog :formCentral:tbTemplates" />
+				  			</h:commandButton>
+				  			
+				  			<p:commandButton oncomplete="PF('editTemplateDialog').hide()" value="#{lb['label.cancelar']}" update=":formCentral:tbTemplates" />
+				  		</h:panelGrid>
+				  		<br/>
+					</h:panelGrid>
+<!-- 				</h:form>			 -->
+			</p:dialog>
+		</h:form>
+		<h:form id="formEditarCorpo" enctype="multipart/form-data">	
+			<p:dialog header="#{lb['label.edicao.rapida']}" position="center top" width="70%" height="80%" widgetVar="editCorpoDialog" resizable="false" id="editCorpoDialog"
+				showEffect="fade" modal="true">
+		  		<br/>
+		  		<p:messages id="msgEditCorpoDialog" showDetail="false" autoUpdate="false" />
+<!-- 				<h:form id="formEditarCorpo" enctype="multipart/form-data"> -->
+					<p:editor value="#{templatesBean.template.corpo}"  height="600"/>
+					
+			        <br/>
+			  		<h:panelGrid columns="2" cellspacing="7" style="margin:0 auto;">
+			  			<h:commandButton actionListener="#{templatesBean.atualizarCorpoTemplate()}" value="Salvar" >
+			  				<f:ajax execute=":formEditarCorpo" render=":formEditarCorpo:msgEditCorpoDialog :formCentral:tbTemplates" />
+			  			</h:commandButton>
+			  			
+			  			<p:commandButton oncomplete="PF('editCorpoDialog').hide()" value="#{lb['label.cancelar']}" update=":formCentral:tbTemplates" />
+			  		</h:panelGrid>	
+<!-- 		  		</h:form>		 -->
+			</p:dialog>
+		</h:form>
+		
+		<h:form id="formHistorico">
+			<p:dialog header="#{lb['label.historico']}" width="700" widgetVar="historicoDialog" resizable="false" id="historicoDialog"
+				showEffect="fade" modal="true" >
+				<br/>
+				<p:messages id="msgHistoricoDialog" showDetail="false" autoUpdate="false" />
+				
+				<h2>#{lb['label.versoes.anteriores.template']} #{templatesBean.historicoSelecionado}.</h2>
+				
+				<br/>				
+<!-- 				<h:form id="formHistorico" > -->
+					<p:dataTable value="#{templatesBean.versoes}" var="versao" id="tbHistorico" emptyMessage="#{msg['mensagem.sem.registros']}" rows="10" paginator="true" 
+						paginatorPosition="bottom">	
+						<p:column width="30%">
+							<f:facet name="header">
+								<h:outputText value="#{lb['label.data']}" />
+							</f:facet>
+							<h:outputText value="#{versao.data}">
+								<f:convertDateTime pattern="dd/MM/yyyy HH:mm" />
+							</h:outputText>
+						</p:column>
+						<p:column width="30%">
+							<f:facet name="header">
+								<h:outputText value="#{lb['label.responsavel']}" />
+							</f:facet>
+							<h:outputText value="#{versao.responsavel}" />
+						</p:column>
+						<p:column width="30%">
+							<f:facet name="header">
+								<h:outputText value="#{lb['label.acoes']}" />
+							</f:facet>
+
+							<p:commandButton id="downloadVersao" icon="fa fa-download" value="#{lb['label.download']}" ajax="false">
+								<p:fileDownload	value="#{templatesBean.downloadVersao(versao)}" />
+							</p:commandButton>
+						</p:column>
+					</p:dataTable>
+<!-- 				</h:form> -->
+			</p:dialog>
+		</h:form>
+<!-- 		</h:form> -->
+	</ui:define>
+</ui:composition>
