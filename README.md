@@ -12,7 +12,7 @@ O Gerenciador de Templates é o sistema responsável por gerenciar os modelos de
 ### Criar e configurar os arquivos de propriedades no JBoss
 O Gerenciador de Templates faz uso de dois arquivos de propriedades que ficam na pasta `<JBOSS_HOME>\ans\properties`, os arquivos necessários são `services.properties` e `ws-users.properties`. Abaixo as propriedades que se fazem necessárias nestes arquivos.
 
-<table class="tg">
+<table>
   <tr>
     <th>Arquivo</th>
     <th>Propriedade</th>
