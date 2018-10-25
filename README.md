@@ -43,3 +43,7 @@ O Gerenciador de Templates faz uso de dois arquivos de propriedades que ficam na
 Após a realização de todos os passos anteriores, teremos o JBoss pronto para receber o pacote do Gerenciador de Templates. O deploy pode ser feito de diversas maneiras e não é o foco desse manual. 
 
 Para essa etapa é necessário ter o Maven instalado e configurado. Ao realizar o primeiro build devemos desabilitar os testes automatizados, os testes dependem de uma instância ativa e impedirão a geração do pacote.
+
+## Projetos Relacionados
+* [SEI-Broker](https://softwarepublico.gov.br/gitlab/ans/sei-broker/wikis/home)
+* [Templates-Broker](https://softwarepublico.gov.br/gitlab/ans/templates-broker/wikis/home)
